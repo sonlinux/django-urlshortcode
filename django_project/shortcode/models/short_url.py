@@ -1,4 +1,3 @@
-# coding: utf-8
 __author__ = 'Alison Mukoma <mukomalison@gmail>'
 __license__ = 'GPL'
 __doc__ = ''
@@ -11,13 +10,15 @@ from django.conf import settings
 from ..utils.short_url import create_short_url
 from ..validators import is_url_valid
 
+
 # we try to get the settings length and if it's empty we default to 8
 SHORT_URL_MAX_LEN = getattr(settings.SHORT_URL_MAX_LEN,
                              'SHORT_URL_MAX_LEN', 8)
 
 
+
 class URLShortcodeManager(models.Manager):
-    def all(self, *args, **kwargs):
+    def all(self,*args, **kwargs):
         """
         We attempt to override the intitial 'all' method
         to only return active links.
@@ -39,9 +40,9 @@ class URLShortcodeManager(models.Manager):
             query.save()
             # we attempt to do do this for all queried objects
             new_short_url_codes += 1
-        msq = 'Fresh short URs created: {codes}'.format(
+        msg = 'Fresh short URs created: {codes}'.format(
             codes=new_short_url_codes)
-        return msq
+        return msg
 
 
 class URLDefine(models.Model):
@@ -70,6 +71,8 @@ class URLDefine(models.Model):
     def save(self, *args, **kwargs):
         if self.shortened_url is None or self.shortened_url == '':
             self.shortened_url = create_short_url(self)
+
+        # I probably will put these 2 lines into their own reusable  function
         if not 'http' in self.url:
             self.url = 'http://' + self.url
         super(URLDefine, self).save(*args, **kwargs)

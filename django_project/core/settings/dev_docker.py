@@ -5,6 +5,8 @@ import os
 print os.environ
 
 ALLOWED_HOSTS = ['*',
+                 u'shortcode.com',
+                 u'shortcode.co',
                  u'0.0.0.0']
 
 DATABASES = {

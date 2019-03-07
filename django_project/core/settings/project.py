@@ -13,6 +13,7 @@ from .contrib import *  # noqa
 INSTALLED_APPS += (
     'core',
     'shortcode',
+    'api',
 )
 
 # Due to profile page does not available,

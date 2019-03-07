@@ -21,13 +21,13 @@ INSTALLED_APPS += (
 
 )
 
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
 
 # noinspection PyUnresolvedReferences
 
@@ -131,3 +131,19 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SHORT_URL_MIN_LEN = 8
 SHORT_URL_MAX_LEN = 15
+
+# Django-host specific settings
+#
+# # We place django-hosts request middleware first in the tuple.
+# MIDDLEWARE_CLASSES = (
+#     'django_hosts.middleware.HostsRequestMiddleware',
+#     ) + MIDDLEWARE_CLASSES
+#
+# # And end the list with the response  middleware in the tuple.
+# MIDDLEWARE_CLASSES += ('django_hosts.middleware.HostsResponseMiddleware',)
+#
+# ROOT_HOSTCONF = 'core.hosts'
+# DEFAULT_HOST = 'www'
+# DEFAULT_REDIRECT_URL = "http://www.shortcode.com:8000"
+# PARENT_HOST = "shortcode.com:8000"
+#

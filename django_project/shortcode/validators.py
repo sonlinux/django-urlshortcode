@@ -6,10 +6,11 @@ __copyright__ = 'devsbranch.com'
 from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
 
-
 def is_url_valid(url):
     validator = URLValidator()
     url_to_validate = url
+
+    # I probably will put these 4 lines into a reusable  function
     if "http" in url_to_validate:
         valid_url = url_to_validate
     else:
