@@ -1,0 +1,10 @@
+{% load thumbnail %}
+{% if the_project %}
+    <ul class="nav navbar-nav">
+        {% if the_project.image_file %}
+            <li><img class="img-rounded"
+                     src="{% thumbnail the_project.image_file 50x50 crop %}"/></li>
+        {% endif %}
+
+    </ul>
+{% endif %}
