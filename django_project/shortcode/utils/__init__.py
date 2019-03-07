@@ -1,4 +1,4 @@
 # coding: utf-8
-__author__ = 'Alison Mukoma <alison@devsbranch.com>'
+__author__ = 'Alison Mukoma <mukomalison@gmail>'
 __license__ = 'GPL'
-__copyright__ = 'devsbranch.com'
+__doc__ = ''

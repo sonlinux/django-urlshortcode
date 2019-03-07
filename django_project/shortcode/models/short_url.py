@@ -1,7 +1,7 @@
 # coding: utf-8
-__author__ = 'Alison Mukoma <alison@devsbranch.com>'
+__author__ = 'Alison Mukoma <mukomalison@gmail>'
 __license__ = 'GPL'
-
+__doc__ = ''
 
 from django.db import models
 from django.utils.encoding import smart_text
