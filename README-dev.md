@@ -96,23 +96,10 @@ Now you can run the server using the green triangle next to the Django server
 label in the run configurations pull down. Debug will also work and you will be
 able to step through views etc as you work.
 
-I made a general overview screencast describing this process here:
-
-[![YouTube Screencast](http://img.youtube.com/vi/n-wwp17MqhU/0.jpg)](https://www.youtube.com/watch?v=n-wwp17MqhU "YouTube Screencast")
-
-
 ## Running Tests
 
 sonlinux write stuff here....
 
 
-## Developer FAQ
-
-**Q**: I get ``ImportError: Could not import settings core.settings.dev_docker``
-when starting the server.
-
-**A:** ``django_project/core/settings/secret.py is either corrupt or you don't
-have permissions to read it as the user you are running ``runserver`` as. A
-common cause of this is if you are running the server in both production
-mode and developer mode on the same host. Simply remove the file or change
-ownership permissions so that you can read/write it.
+## Please note that you can not scale by using the container name in the 
+docker-compose.yml file.

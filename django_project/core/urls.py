@@ -35,7 +35,7 @@ def handler500(request):
 schema_view = get_swagger_view(title='URL Shortener API')
 
 urlpatterns = [
-    url(r'^$', include('api.urls')),
+    url(r'^', include('api.urls')),
     url(r'^site-admin/', include(admin.site.urls)),
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^accounts/', include('allauth.urls')),
