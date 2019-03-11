@@ -6,6 +6,7 @@ __doc__ = ''
 from rest_framework import serializers
 from shortcode.models.short_url import URLDefine
 
+
 class URLDefineSerializer(serializers.ModelSerializer):
     """
     Serializer for URL definition model.
@@ -15,3 +16,6 @@ class URLDefineSerializer(serializers.ModelSerializer):
     class Meta:
         model = URLDefine
         fields = '__all__'
+        # extra_kwargs = {
+        #     'url': {'view_name': 'contents-detail'}
+        # }

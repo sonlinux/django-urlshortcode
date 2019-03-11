@@ -13,12 +13,11 @@ from ..validators import is_url_valid
 
 # we try to get the settings length and if it's empty we default to 8
 SHORT_URL_MAX_LEN = getattr(settings.SHORT_URL_MAX_LEN,
-                             'SHORT_URL_MAX_LEN', 8)
-
+                            'SHORT_URL_MAX_LEN', 8)
 
 
 class URLShortcodeManager(models.Manager):
-    def all(self,*args, **kwargs):
+    def all(self, *args, **kwargs):
         """
         We attempt to override the intitial 'all' method
         to only return active links.
@@ -46,8 +45,9 @@ class URLShortcodeManager(models.Manager):
 
 
 class URLDefine(models.Model):
-    url = models.CharField(max_length=250, validators=[is_url_valid])
-    shortened_url = models.CharField(max_length=SHORT_URL_MAX_LEN, unique=True, blank=True)
+    url = models.CharField(max_length=5000, validators=[is_url_valid])
+    shortened_url = models.CharField(
+        max_length=SHORT_URL_MAX_LEN, unique=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
