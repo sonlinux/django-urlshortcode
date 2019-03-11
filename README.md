@@ -1,6 +1,6 @@
-=====
+
 URLShortcode
-=====
+============
 
 URLShortcode is a Django app.
 
