@@ -6,8 +6,7 @@ URLShortcode is a Django app.
 
 Note that URLShortcode is not yet feature complete.
 
-The latest source code is available at http://github
-.com/sonlinux/django-urlshortcode.
+The latest source code is available at http://github.com/sonlinux/django-urlshortcode.
 
 * **Developers:** See our `project setup guide`_ and `developer guide`_
 
